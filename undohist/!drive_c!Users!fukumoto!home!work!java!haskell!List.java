@@ -1,0 +1,4 @@
+
+((digest . "0a391de8988e693469a63584bcc1e1b9") (undo-list nil (170 . 176) nil ("R" . -170) ((marker . 170) . -1) (t 22283 29770 0 0) nil ("(" . -186) ((marker . 177) . -1) ((marker* . 191) . 1) ((marker . 192) . -1) nil (")" . -187) ((marker* . 176) . 1) ((marker . 177) . -1) nil ("(" . -220) ((marker . 177) . -1) ((marker* . 191) . 1) ((marker . 192) . -1) nil (")" . -221) ((marker* . 176) . 1) ((marker . 177) . -1) (t 22283 29725 0 0) nil (170 . 171) nil ("T" . -170) (t 22283 29660 0 0) nil (118 . 122) (t 22283 29642 0 0) nil ("<" . -71) ((marker . 71) . -1) ((marker . 71) . -1) nil ("T" . -72) ((marker . 71) . -1) ((marker . 71) . -1) nil (">" . -73) ((marker . 71) . -1) ((marker . 71) . -1) ((marker* . 176) . 1) ((marker . 177) . -1) nil (" " . -74) nil (74 . 75) (t 22283 29432 0 0) nil (134 . 136) (t 22283 29403 0 0) nil ("package haskell;
+
+" . 1) ((marker . 1) . -18) 19 nil undo-tree-canary))

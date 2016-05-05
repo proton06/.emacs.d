@@ -1,0 +1,8 @@
+alias pdf C:/Program\ Files\ (x86)/Adobe/Acrobat\ Reader\ DC/Reader/AcroRd32.exe
+alias git C:\Users\fukumoto\AppData\Local\Programs\Git\git-bash.exe
+alias mv mv - i
+alias emacs find-file $1
+alias m find-file $1
+alias d dired .
+alias eps C:/Program\ Files\ (x86)/Ghostgum/gsview/gsview32.exe $1
+alias python2 C:/Users/fukumoto/AppData/Local/Enthought/Canopy/User/python.exe $1 $2

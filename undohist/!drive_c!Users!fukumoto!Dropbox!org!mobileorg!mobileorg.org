@@ -1,0 +1,11 @@
+
+((digest . "68b329da9893e34099c7d8ad5cb9c940") (undo-list (1 . 2) (t 22314 48596 0 0) ("
+
+* F(edit:addheading) [[olp:memo.org:memo][memo]]
+** Old value
+
+** New value
+近傍をどう定義したか資料に書く
+** End of edit
+
+" . 1) ((marker*) . 60) ((marker) . -108) ((marker) . -109) (t 22306 14365 0 0)))

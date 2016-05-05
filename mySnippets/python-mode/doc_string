@@ -1,0 +1,16 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: doc string
+# key: ds
+# binding: direct-keybinding
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+"""
+$1
+parameters
+----------
+$2
+${3:returns
+----------
+out : $4}
+"""
+$0

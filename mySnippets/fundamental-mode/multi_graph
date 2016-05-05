@@ -1,0 +1,33 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: multi_graph
+# key: multi
+# binding: direct-keybinding
+# --
+reset
+
+# 出力設定
+set terminal postscript enhanced eps color
+set output '${1:output}.eps'
+
+# 座標系の指定
+${2:set logscale y
+set format y "10^{%L}"}
+${3:set logscale y2
+set format y2 "10^{%L}"}
+set ytics nomirror # 第一y軸の目盛は左側のみにする
+set y2tics         # 第二y軸を描画することを指定
+set grid           # 目盛線を描画することを指定
+set xlabel "${4:xlabel}"  # x軸の見出しを指定
+set ylabel "${5:ylabel}"           # 第一y軸の見出しを指定
+set y2label "${6:y2label}" # 第二y軸の見出しを指定
+# 凡例
+set key top right   # 凡例は右上に描画
+
+# データ描画
+plot '${7:DataFile1}' using ${8:1}:${9:2} with lines title "$5", \
+     '${10:DataFile2}' using ${11:1}:${12:2} with lines title "$6" axes x1y2
+     #  "axes x1y2"を指定することで DataFile2 の目盛は第一x軸と第二y軸にとることを指定
+
+#出力を標準に戻す
+set terminal windows
+set output

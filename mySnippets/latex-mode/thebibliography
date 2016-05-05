@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: thebibliography
+# key: bib
+# binding: direct-keybinding
+# --
+\begin{thebibliography}{9}
+  \bibitem{bib:${1:label}} $0
+\end{thebibliography}

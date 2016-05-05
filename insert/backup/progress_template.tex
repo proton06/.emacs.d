@@ -1,0 +1,59 @@
+%\documentstyle[epsf,twocolumn]{jarticle}       %LaTeX2.09仕様
+\documentclass[twocolumn]{jarticle}     %pLaTeX2e仕様
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  基本 バージョン
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\topmargin}{-45pt}
+%\setlength{\oddsidemargin}{0cm}
+\setlength{\oddsidemargin}{-7.5mm}
+%\setlength{\evensidemargin}{0cm}
+\setlength{\textheight}{24.1cm}
+%setlength{\textheight}{25cm}
+\setlength{\textwidth}{17.4cm}
+%\setlength{\textwidth}{172mm}
+\setlength{\columnsep}{11mm}
+
+
+%【節がかわるごとに(1.1)(1.2) …(2.1)(2.2)と数式番号をつけるとき】
+%\makeatletter
+%\renewcommand{\theequation}{%
+%\thesection.\arabic{equation}} %\@addtoreset{equation}{section}
+%\makeatother
+
+%\renewcommand{\arraystretch}{0.95} 行間の設定
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipdfmx]{graphicx}   %pLaTeX2e仕様(要\documentstyle ->\documentclass)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\twocolumn[
+\noindent
+
+\hspace{1em}
+%日付
+2015年??月??日(?)
+\hfill
+\ \ 福本 篤人
+
+\vspace{2mm}
+
+\hrule
+
+\begin{center}
+{\Large \bf 進捗報告}
+\end{center}
+
+
+\hrule
+\vspace{3mm}
+]    % ]は必要なので消さない
+
+% ここから 文章 Start!
+\section{セクション}
+
+
+\end{document}

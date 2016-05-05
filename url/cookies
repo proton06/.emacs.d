@@ -1,0 +1,43 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".google.co.jp"
+  [url-cookie "HttpOnly" nil "31-Jul-2016 04:39:50.00 GMT" "/" ".google.co.jp" nil]
+  [url-cookie "NID" "76=BO3Pl04hZsQyEYS1_K8fa1CsL00vcmWKDn4NZhR51xamg6tdZBEz0pxMxfsmbXbghfNloau_lqdbF_HYPCh2nCGkDYxFI0FsU0aWIv0iXD2RdlrMpP-SmjoAMoRpn6h8" "31-Jul-2016 04:39:50.00 GMT" "/" ".google.co.jp" nil])
+ (".mitemin.net"
+  [url-cookie "unique_id" "ORz5XlLqbqDDPmUJKvsIwM4JfAOF6u2T" "22-Apr-2017 12:12:12.00 GMT" "/" ".mitemin.net" nil])
+ ("morikinoko.com"
+  [url-cookie "ldblog_u" "61.86.144.231.1455792076454025" "18 May 16 10:41:16 [GMT]" "/" "morikinoko.com" nil])
+ (".fc2.com"
+  [url-cookie "bloguid" "7b41407b-4206-44e3-a103-f18afd2d92a2" "17-Feb-2017 10:33:11.00 GMT" "/" ".fc2.com" nil])
+ (".syosetu.org"
+  [url-cookie "ETURAN" "18594_1" "01-Jan-2030 00:00:00.00 GMT" "/" ".syosetu.org" nil])
+ (".syosetu.com"
+  [url-cookie "nlist1" "88yc.3h-h7a6.8-grg3.v-5p7z.u-8gyw.21-8lof.w-9pwv.a-a7qk.h-81c3.n-caaq.1o" "04-May-2017 15:32:24.00 GMT" "/" ".syosetu.com" nil]
+  [url-cookie "ks2" "bc7xn6wtaxx" "04-May-2017 15:32:24.00 GMT" "/" ".syosetu.com" nil])
+ ("nnt-sokuhou.com"
+  [url-cookie "ldblog_u" "61.86.144.231.1454724638821782" "06 May 16 02:10:38 [GMT]" "/" "nnt-sokuhou.com" nil])
+ ("gameimpression.doorblog.jp"
+  [url-cookie "ldblog_u" "61.86.144.231.1454724852041356" "06 May 16 02:14:12 [GMT]" "/" "gameimpression.doorblog.jp" nil])
+ ("hatena.ne.jp"
+  [url-cookie "b" "$1$DP7ljpo4$CKBlKQjOkDZovQn2IEM9e1" "01-Feb-2036 02:16:42.00 GMT" "/" "hatena.ne.jp" nil])
+ (".checkmate-blog.com"
+  [url-cookie "__cfduid" "d589a774c3c9122fc957b480dbfd891421454725231" "05 Feb 17 02:20:31 [GMT]" "/" ".checkmate-blog.com" nil]
+  [url-cookie "HttpOnly" nil "05 Feb 17 02:20:31 [GMT]" "/" ".checkmate-blog.com" nil])
+ ("blog.livedoor.jp"
+  [url-cookie "ldblog_u" "61.86.144.231.1454860680116038" "07 May 16 15:58:00 [GMT]" "/" "blog.livedoor.jp" nil])
+ ("news4vip.livedoor.biz"
+  [url-cookie "ldblog_u" "61.86.144.231.1454860737795421" "07 May 16 15:58:57 [GMT]" "/" "news4vip.livedoor.biz" nil])
+ ("potittoss.blog.jp"
+  [url-cookie "ldblog_u" "61.86.144.231.1455986532749822" "20 May 16 16:42:12 [GMT]" "/" "potittoss.blog.jp" nil])
+ ("ayamevip.com"
+  [url-cookie "ldblog_u" "61.86.144.231.1455986673296899" "20 May 16 16:44:33 [GMT]" "/" "ayamevip.com" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

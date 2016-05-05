@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: table
+# key: tb_
+# binding: direct-keybinding
+# --
+#+CAPTION: ${1:caption}
+#+NAME: tb:${2:label}
+#+ATTR_LaTeX: :align ${3:|l|l|}

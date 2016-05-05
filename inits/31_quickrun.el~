@@ -1,0 +1,12 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; quickrun
+(global-set-key (kbd"C-c q") 'quickrun-sc)
+(global-set-key (kbd"C-c C-q") 'quickrun-with-arg)
+;(setq quickrun-focus-p t)
+(global-set-key (kbd "<f5>") 'quickrun-sc)
+
+(defun quickrun-sc (start end)
+  (interactive "r")
+  (if mark-active
+	  (quickrun :start start :end end)
+	(quickrun)))

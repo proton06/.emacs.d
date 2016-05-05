@@ -1,0 +1,115 @@
+
+((digest . "c5bc1ba6a3c87e73aeeee4fa7be1b35b") (undo-list nil (1 . 5567) nil ("(50,100)-CMA-ES(mu_eff=27.2), Ver=\"0.99.40\", dimension=2, 0 diagonal iter., randomSeed=1 (Mon Apr 25 00:57:39 JST 2016)
+!!!1.3175921482560478
+Iteration,#Fevals: rb Function Value Delta( best ,worst) |idx: Max SD idx: Min SD  | minsigD  sigma Axisratio | time, in eig
+    1(100),    100: 8.3757444506261100e-01 (+0e+00,1e+05) |  1: 2.0e+00  0: 1.2e+00 | 2.3e+00 2.3e+00   1.00   |  0.4  0.0 
+    1(100),    101: 8.3757444506261100e-01 (+0e+00,1e+05) |  1: 2.0e+00  0: 1.2e+00 | 2.3e+00 2.3e+00   1.00   |  0.4  0.0 
+Terminated due to
+  
+best function value 0.837574445062611 at evaluation 83
+!!!0.9484838362109314
+    2(100),    202: 4.5091841325837614e-02 (+0e+00,9e+03) |  0: 9.4e-01  0: 9.4e-01 | 1.2e+00 2.3e+00   1.71   |  0.4  0.0 
+Terminated due to
+  
+best function value 0.045091841325837614 at evaluation 118
+!!!0.5818045642439236
+    3(100),    303: 3.4395817779142220e-01 (-3e-01,4e+03) |  1: 6.9e-01  0: 6.8e-01 | 7.3e-01 2.3e+00   1.47   |  0.4  0.0 
+Terminated due to
+  
+best function value 0.045091841325837614 at evaluation 118
+!!!0.39628447817440987
+    4(100),    404: 3.2910910954045220e-02 (+0e+00,6e+02) |  1: 6.0e-01  0: 6.0e-01 | 5.1e-01 2.7e+00   2.04   |  0.5  0.0 
+Terminated due to
+  
+best function value 0.03291091095404522 at evaluation 383
+!!!0.3134741957359411
+    5(100),    505: 7.4914451402694870e-02 (-4e-02,6e+02) |  0: 5.8e-01  0: 4.5e-01 | 4.5e-01 3.1e+00   1.90   |  0.5  0.0 
+Terminated due to
+  
+best function value 0.03291091095404522 at evaluation 383
+!!!0.3131165139699495
+    6(100),    606: 8.7476372141313940e-03 (+0e+00,4e+02) |  1: 4.3e-01  0: 4.1e-01 | 2.5e-01 3.0e+00   2.66   |  0.5  0.0 
+Terminated due to
+  
+best function value 0.008747637214131394 at evaluation 521
+!!!0.26603730186125796
+    7(100),    707: 6.3976321019948310e-03 (+0e+00,2e+02) |  1: 5.4e-01  0: 4.4e-01 | 1.6e-01 3.2e+00   3.85   |  0.6  0.0 
+Terminated due to
+  
+best function value 0.006397632101994831 at evaluation 701
+!!!0.2735296020790581
+    8(100),    808: 2.6280741994753210e-02 (-2e-02,4e+02) |  1: 4.4e-01  0: 3.2e-01 | 9.9e-02 3.6e+00   7.72   |  0.6  0.0 
+Terminated due to
+  
+best function value 0.006397632101994831 at evaluation 701
+!!!0.23279641804498905
+    9(100),    909: 1.1191828263769077e-03 (+0e+00,2e+02) |  1: 2.7e-01  0: 1.9e-01 | 8.6e-02 3.5e+00   6.01   |  0.6  0.0 
+Terminated due to
+  
+best function value 0.0011191828263769077 at evaluation 908
+!!!0.12728774252583186
+   10(100),   1010: 1.6110941839154944e-03 (-5e-04,1e+01) |  1: 2.0e-01  0: 1.3e-01 | 4.7e-02 3.4e+00   6.88   |  0.6  0.0 
+Terminated due to
+  
+best function value 0.0011191828263769077 at evaluation 908
+!!!0.08430730406867601
+   11(100),   1111: 1.1444416025808597e-03 (-3e-05,2e+00) |  1: 2.0e-01  0: 1.2e-01 | 3.3e-02 4.1e+00   8.78   |  0.6  0.0 
+Terminated due to
+  
+best function value 0.0011191828263769077 at evaluation 908
+!!!0.09070731068413967
+   12(100),   1212: 2.1744707455000480e-04 (+0e+00,3e+00) |  1: 1.6e-01  0: 8.7e-02 | 1.8e-02 4.4e+00  14.46   |  0.6  0.0 
+Terminated due to
+  
+best function value 2.174470745500048E-4 at evaluation 1185
+!!!0.08038623897781276
+   13(100),   1313: 5.3026472121582570e-04 (-3e-04,4e-01) |  1: 1.0e-01  0: 5.4e-02 | 5.9e-03 4.4e+00  30.47   |  0.7  0.0 
+Terminated due to
+  
+best function value 2.174470745500048E-4 at evaluation 1185
+!!!0.04503409295024653
+   14(100),   1414: 4.7385842123616990e-05 (-2e-05,7e-02) |  1: 7.6e-02  0: 4.1e-02 | 3.5e-03 5.0e+00  36.90   |  0.7  0.0 
+Terminated due to
+  
+best function value 3.0203975636059204E-5 at evaluation 1414
+!!!0.03184675827652266
+   15(100),   1515: 4.3816202415834820e-05 (-4e-05,2e-01) |  1: 3.8e-02  0: 2.0e-02 | 2.3e-03 4.6e+00  34.07   |  0.7  0.0 
+Terminated due to
+  
+best function value 6.310792330832885E-7 at evaluation 1515
+!!!0.016822230115352166
+   16(100),   1616: 1.2522441646141160e-05 (-1e-05,1e-02) |  1: 1.5e-02  0: 8.0e-03 | 1.1e-03 4.1e+00  35.29   |  0.7  0.0 
+Terminated due to
+  
+best function value 6.310792330832885E-7 at evaluation 1515
+!!!0.007690154480762268
+   17(100),   1717: 7.5940557604849790e-06 (-7e-06,1e-03) |  1: 9.0e-03  0: 4.6e-03 | 4.7e-04 3.9e+00  35.32   |  0.7  0.0 
+Terminated due to
+  
+best function value 4.1969924713108195E-7 at evaluation 1717
+!!!0.00346324044813269
+   18(100),   1818: 7.0514973793716720e-08 (+0e+00,2e-04) |  1: 3.9e-03  0: 1.9e-03 | 1.9e-04 3.7e+00  48.55   |  0.7  0.0 
+Terminated due to
+  
+best function value 7.051497379371672E-8 at evaluation 1768
+!!!0.0017426401170378303
+   19(100),   1919: 1.0068564036630665e-07 (-7e-08,4e-05) |  1: 2.3e-03  0: 1.2e-03 | 8.9e-05 3.7e+00  49.27   |  0.7  0.0 
+Terminated due to
+  
+best function value 3.036282949559013E-8 at evaluation 1919
+!!!9.480361571719518E-4
+   20(100),   2020: 3.9978276756843680e-09 (-1e-09,1e-05) |  1: 8.5e-04  0: 4.3e-04 | 4.3e-05 3.5e+00  56.71   |  0.7  0.0 
+Terminated due to
+  
+best function value 2.8225039977000795E-9 at evaluation 2020
+!!!3.66304122770554E-4
+   21(100),   2121: 1.5947088446333438e-09 (-1e-09,2e-06) |  1: 3.3e-04  0: 1.6e-04 | 1.7e-05 3.3e+00  51.79   |  0.8  0.0 
+Terminated due to
+  
+best function value 2.294674015903793E-10 at evaluation 2121
+!!!1.6012264192188683E-4
+   22(100),   2222: 5.2747073117926800e-10 (-5e-10,3e-07) |  1: 1.3e-04  0: 6.7e-05 | 6.4e-06 2.9e+00  51.67   |  0.8  0.0 
+Terminated due to
+  Fitness: Objective function value dropped below the target function value 1.0E-10 (iter=22,eval=2222)
+best function value 1.395340539817295E-12 at evaluation 2222
+" . 1) ((marker . 1) . -5478) ((marker . 5231) . -981) ((marker . 5231) . -981) ((marker . 5260) . -984) ((marker . 5260) . -984) ((marker . 1) . -140) ((marker . 5384) . -1043) ((marker . 5384) . -1043) ((marker . 5402) . -1066) ((marker . 5402) . -1066) ((marker . 4530) . -120) ((marker . 4530) . -120) ((marker . 4559) . -142) ((marker . 4559) . -142) ((marker . 4683) . -267) ((marker . 4683) . -267) ((marker . 4701) . -391) ((marker . 4701) . -391) ((marker . 4704) . -515) ((marker . 4704) . -515) ((marker . 4764) . -533) ((marker . 4764) . -533) ((marker . 4792) . -536) ((marker . 4792) . -536) ((marker . 4916) . -591) ((marker . 4916) . -591) ((marker . 4934) . -613) ((marker . 4934) . -613) ((marker . 4937) . -737) ((marker . 4937) . -737) ((marker . 4998) . -755) ((marker . 4998) . -755) ((marker . 5025) . -758) ((marker . 5025) . -758) ((marker . 5149) . -817) ((marker . 5149) . -817) ((marker . 5167) . -839) ((marker . 5167) . -839) ((marker . 5170) . -963) ((marker . 5170) . -963) ((marker . 1) . -535) ((marker* . 5567) . 4943) ((marker . 1) . -120) ((marker . 5506) . -1190) ((marker . 5506) . -1190) ((marker) . -1208) ((marker) . -1208) ((marker) . -1211) ((marker) . -1211) ((marker) . -1269) ((marker) . -1269) ((marker) . -1291) ((marker) . -1291) ((marker . 1) . -535) ((marker . 1) . -535) ((marker . 1) . -1262) ((marker) . -1415) ((marker) . -1415) ((marker) . -1433) ((marker) . -1433) ((marker) . -1436) ((marker) . -1436) ((marker) . -1494) ((marker) . -1494) ((marker) . -1516) ((marker) . -1516) ((marker) . -1640) ((marker) . -1640) ((marker) . -1658) ((marker) . -1658) ((marker) . -1661) ((marker) . -1661) ((marker) . -1720) ((marker) . -1720) ((marker) . -1743) ((marker) . -1743) ((marker) . -1867) ((marker) . -1867) ((marker) . -1885) ((marker) . -1885) ((marker) . -1888) ((marker) . -1888) ((marker) . -1947) ((marker) . -1947) ((marker) . -1969) ((marker) . -1969) ((marker) . -2093) ((marker) . -2093) ((marker . 1) . -120) ((marker . 1) . -1262) ((marker) . -120) ((marker) . -5478) ((marker*) . 5478) ((marker) . -1) ((marker*) . 5471) ((marker) . -8) nil (1 . 5479) (t . -1)))

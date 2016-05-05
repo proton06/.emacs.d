@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: figure
+# key: fig
+# binding: direct-keybinding
+# --
+\begin{figure}[htb]
+  \centering
+  \includegraphics[clip, width=9cm]{figures/${1:path}.eps}
+  \caption{\label{fig:${2:label}} ${3:caption}}
+\end{figure}

@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: quickrun-input-file-extension
+# key: qri
+# binding: direct-keybinding
+# --
+(setq quickrun-input-file-extension ".qrinput")
+

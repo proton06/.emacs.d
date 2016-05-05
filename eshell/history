@@ -1,0 +1,128 @@
+runghc main.hs 
+runghc main.hs 
+runghc main.hs 
+runghc main.hs 
+runghc main.hs 
+runghc main.hs 
+runghc main.hs 
+runghc main.hs 
+runghc main.hs 
+runghc main.hs 
+runghc main.hs 
+exit
+ghci
+ls
+platex progress.tex
+platex progress.tex
+platex progress.tex
+dvipdfmx progress.tex
+dvipdfmx progress.dvi 
+pdf progress.pdf 
+alias pdf 'C:/Program Files (x86)/Adobe/Acrobat Reader DC/Reader/AcroRd32.exe'
+pdf progress.pdf 
+pdf progress.pdf 
+alias pdf 'C:/Program\ Files\ (x86)/Adobe/Acrobat\ Reader\ DC/Reader/AcroRd32.exe'
+pdf progress.pdf 
+alias pdf 'C:/Program\ Files\ (x86)/Adobe/Acrobat\ Reader\ DC/Reader/AcroRd32.exe $1'
+pdf progress.pdf 
+platex progress.tex
+dvipdfmx progress.dvi 
+pdf progress.pdf 
+platex progress.tex
+platex progress.tex
+platex progress.tex
+platex progress.tex
+dvipdfmx progress.dvi 
+platex progress.tex
+dvipdfmx progress.dvi 
+platex progress.tex
+dvipdfmx progress.dvi 
+platex progress.tex
+dvipdfmx progress.dvi 
+pdf progress.pdf 
+platex progress.tex
+dvipdfmx progress.dvi 
+pdf progress.pdf 
+platex progress.tex
+dvipdfmx progress.dvi 
+pdf progress.pdf 
+platex progress.tex
+dvipdfmx progress.dvi 
+pdf progress.pdf 
+platex progress.tex
+dvipdfmx progress.dvi 
+pdf progress.pdf 
+pdflatex progress.tex 
+pdflatex progress.tex 
+ls
+pdf progress.pdf 
+luatex progress.tex 
+platex progress.tex 
+dvipdfmx progress.dvi 
+pdf progress.pdf 
+platex progress.tex 
+platex progress.tex 
+platex progress.tex 
+exit
+platex progress.tex
+platex progress.tex
+ipython notebook
+ipython notebook
+exit
+ipython notebook
+ipython notebook
+cd work/dark_souls_analyze/
+ipython notebook
+exit
+ipython notebook
+exit
+cd ~
+cd work/
+mkdir ein
+cd ein
+ipython notebook
+ipython notebook
+exit
+ipython notebook
+ipython notebook
+exit
+ipython notebook
+ipython notebook
+exit
+javac  Main.java && java Main 
+javac  Main.java && java Main 
+javac Main.java
+javac -encoding UTF-8 Main.java
+java Main.class
+java Main
+javac -encoding UTF-8 Main.java
+ls
+unpack
+Unpack
+ajr
+jar
+jar --version
+ls
+jar *.jar
+ls
+jar jga-0.8.1-src.jar 
+pdfplatex progress.tex
+pdfplatex progress.tex
+pdfplatex progress.tex
+pdfplatex progress.tex
+cd pdf/
+pdfplatex doc.tex
+pdfplatex doc.tex
+pdfplatex doc.tex
+platex doc.tex
+pdfcrop figure3.pdf
+pdfcrop figure3.pdf figure3.pdf
+pdfcrop figure3.pdf figure4.pdf
+pdfcrop *.pdf
+ipython notebook
+ghc -pkg field text exposed-modules
+ghc --help
+ghc -v
+cabal  update
+cabal info pqueue
+cabal install pqueue

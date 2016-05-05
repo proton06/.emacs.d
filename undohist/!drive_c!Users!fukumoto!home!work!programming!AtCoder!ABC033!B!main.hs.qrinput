@@ -1,0 +1,11 @@
+
+((digest . "07e01619c8a64ce2ba0440c1af0f5607") (undo-list nil (1 . 185) nil ("5
+a 10
+b 20
+c 30
+d 40
+e 100" . 1) ((marker . 1) . -27) ((marker . 45) . -2) ((marker . 45) . -2) ((marker . 4) . -17) ((marker . 4) . -17) ((marker . 18) . -12) ((marker . 18) . -12) ((marker . 33) . -7) ((marker . 33) . -7) ((marker . 1) . -22) ((marker . 1) . -22) ((marker . 1) . -27) ((marker . 1) . -27) ((marker . 1) . -27) ((marker . 1) . -27) ((marker) . -27) ((marker) . -2) 28 (t 22271 38991 0 0) nil (1 . 28) nil ("4
+unagi 20
+usagi 13
+snuke 42
+smeke 7" . -1) ((marker . 4) . -20) ((marker . 4) . -20) ((marker . 18) . -11) ((marker . 18) . -11) ((marker . 33) . -2) ((marker . 33) . -2) ((marker . 1) . -29) ((marker . 1) . -29) ((marker . 1) . -36) ((marker . 1) . -36) ((marker) . -36) ((marker) . -29) ((marker) . -36) 30 (t 22271 35844 0 0) nil (1 . 37) (t . -1)))

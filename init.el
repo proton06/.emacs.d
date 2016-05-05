@@ -1,0 +1,132 @@
+﻿;(require 'seq)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; LoadPath
+;; load-pathを再帰的に追加。
+(defun add-to-load-path (&rest paths)
+(let (path)
+    (dolist (path paths paths)
+    (let ((default-directory (expand-file-name (concat user-emacs-directory path))))
+    (add-to-list 'load-path default-directory)
+     (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+         (normal-top-level-add-subdirs-to-load-path))))))
+
+(add-to-load-path "elpa")
+(add-to-load-path "site-lisp")
+
+(set-language-environment 'Japanese)
+(prefer-coding-system 'utf-8)
+
+(cd "~/")
+
+;; el と elc の新しいほうを読み込む
+(setq load-prefer-newer t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; other option
+;;ツールバーを消す
+(tool-bar-mode -1)
+;; スクロールバーを消す
+;(scroll-bar-mode -1)
+;(setq scroll-step 1)
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; highlight
+(global-hl-line-mode t)                   ;; 現在行をハイライト
+(show-paren-mode t)                       ;; 対応する括弧をハイライト
+(setq show-paren-style 'mixed)            ;; 括弧のハイライトの設定。
+(transient-mark-mode t)                   ;; 選択範囲をハイライト
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(flycheck-error-list-info ((t (:inherit success))))
+ '(hl-line ((t (:background "gray12"))))
+ '(linum-highlight-face ((t (:inherit default :foreground "midnight blue"))))
+ '(show-paren-match ((t (:background "SteelBlue4" :foreground "white"))))
+ '(vhl/default-face ((t (:background "gray15")))))
+
+;; フォント設定
+(set-face-attribute 'default nil
+		    :family "Myrica M" ;; font
+		    :height 120) ;; font size
+
+
+
+;; 選択範囲を直接編集できるように
+(delete-selection-mode t)
+
+;; クリップボードの上書きを防ぐ
+(setq save-interprogram-paste-before-kill t)
+
+;; ビープ音を消す
+(setq visible-bell t)
+(setq ring-bell-function 'ignore)
+
+
+;; GCを減らして軽くする(デフォルトの10倍)
+(setq gc-cons-threshold (* 10 gc-cons-threshold))
+
+;; yes or noをy or n
+(fset 'yes-or-no-p 'y-or-n-p)
+
+
+;; 行番号表示
+(global-linum-mode t)
+(set-face-attribute 'linum nil
+		    :foreground "#f0f8ff"  ;;行番号の色
+		    :height 0.9)
+
+
+;; テーマ
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(custom-enabled-themes (quote (deeper-blue)))
+ '(electric-indent-mode t)
+ '(flycheck-chktexrc "C:/Users/fukumoto/home/.emacs.d/config/flycheck/.chktexrc")
+ '(flycheck-flake8-maximum-line-length 120)
+ '(flycheck-flake8rc "C:/Users/fukumoto/home/.emacs.d/config/flycheck/.flake8rc")
+ '(haskell-indent-after-keywords
+   (quote
+    (("where" 4 0)
+     ("of" 4)
+     ("do" 4)
+     ("mdo" 4)
+     ("rec" 4)
+     ("in" 4 0)
+     ("{" 4)
+     "if" "then" "else" "let")))
+ '(haskell-indent-spaces 4)
+ '(haskell-indentation-ifte-offset 4)
+ '(haskell-indentation-layout-offset 4)
+ '(haskell-indentation-left-offset 4)
+ '(haskell-indentation-starter-offset 4)
+ '(haskell-indentation-where-post-offset 4)
+ '(haskell-indentation-where-pre-offset 4)
+ '(inhibit-startup-screen t)
+ '(org-agenda-files nil)
+ '(org-startup-indented t)
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
+
+
+;; パッケージ管理
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+;; inits
+(require 'init-loader)
+(setq init-loader-show-log-after-init 'error-only)
+(init-loader-load "~/.emacs.d/inits") ; 設定ファイルがあるディレクトリを指定
+

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: figure
+# key: fig_
+# --
+#+CAPTION: ${1:caption}
+#+NAME: fig:${2:label}
+#+ATTR_LaTeX: :width ${3:9}cm
+file:figures/${4:filepath}.eps

@@ -1,0 +1,9 @@
+
+((digest . "94d19f5b3cfa8beeb416456ccfb09bbd") (undo-list nil ("
+* テニス
+  SCHEDULED: <2016-03-26 土 15:00-18:00>
+  :PROPERTIES:
+  :ID:       dd83d122-3b24-435d-b2d8-9ec57887fe70
+  :END:
+  打越 東面
+" . -1) ((marker) . -120) ((marker) . -120) ((marker) . -7) ((marker) . -7) ((marker) . -62) ((marker) . -62) ((marker) . -47) ((marker) . -47) ((marker) . -112) ((marker) . -112) ((marker) . -1) ((marker) . -1) ((marker . 1) . -128) ((marker . 1) . -128) ((marker*) . 67) ((marker) . -119) ((marker) . -128) ((marker) . -128) 121 (t 22259 29689 0 0) nil ("p" . -128) nil (128 . 129) (t 22259 29683 0 0) nil ("p" . -128) nil ("\\" . -129) nil undo-tree-canary))

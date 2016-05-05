@@ -1,0 +1,26 @@
+
+((digest . "7fab5f1e638766d7eff6a200a1b24ff9") (undo-list (1 . 383) ("alias pdf C:/Program\\ Files\\ (x86)/Adobe/Acrobat\\ Reader\\ DC/Reader/AcroRd32.exe
+alias git C:\\Users\\fukumoto\\AppData\\Local\\Programs\\Git\\git-bash.exe
+alias mv mv - i
+alias emacs find-file $1
+alias m find-file $1
+alias d dired .
+alias eps C:/Program\\ Files\\ (x86)/Ghostgum/gsview/gsview32.exe $1
+alias python2 C:/Users/fukumoto/AppData/Local/Enthought/Canopy/User/python.exe $1 $2
+" . 1) (t 22273 12049 0 0) (1 . 380) ("alias pdf C:/Program Files (x86)/Adobe/Acrobat Reader DC/Reader/AcroRd32.exe
+alias git C:\\Users\\fukumoto\\AppData\\Local\\Programs\\Git\\git-bash.exe
+alias mv mv - i
+alias emacs find-file $1
+alias m find-file $1
+alias d dired .
+alias eps C:/Program\\ Files\\ (x86)/Ghostgum/gsview/gsview32.exe $1
+alias python2 C:/Users/fukumoto/AppData/Local/Enthought/Canopy/User/python.exe $1 $2
+" . 1) (t 22273 12022 0 0) (1 . 376) ("alias python2 C:/Users/fukumoto/AppData/Local/Enthought/Canopy/User/python.exe $1 $2
+alias eps C:/Program\\ Files\\ (x86)/Ghostgum/gsview/gsview32.exe $1
+alias d dired .
+alias m find-file $1
+alias emacs find-file $1
+alias mv mv - i
+alias pdf c:/Program\\ Files\\ (x86)/Adobe/Reader\\ 11.0/Reader/AcroRd32.exe $1
+alias git C:\\Users\\fukumoto\\AppData\\Local\\Programs\\Git\\git-bash.exe
+" . 1) (t 22139 53054 0 0)))

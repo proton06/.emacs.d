@@ -1,0 +1,7 @@
+
+((digest . "f3a707862354156d997cc856b16665e1") (undo-list nil (1 . 42) nil ("4 5 0
+0 1 1
+0 2 4
+1 2 2
+2 3 1
+1 3 5" . 1) ((marker . 1) . -35) ((marker . 31) . -6) ((marker . 31) . -6) ((marker . 25) . -12) ((marker . 25) . -12) ((marker . 19) . -18) ((marker . 19) . -18) ((marker . 13) . -24) ((marker . 13) . -24) ((marker . 7) . -30) ((marker . 7) . -30) ((marker . 1) . -35) ((marker . 1) . -35) ((marker . 1) . -35) ((marker . 1) . -35) ((marker . 1) . -35) ((marker . 1) . -35) ((marker . 1) . -35) ((marker . 1) . -35) ((marker . 1) . -35) ((marker) . -6) ((marker) . -35) 36 (t 22312 45299 0 0) nil (1 . 36) (t . -1)))

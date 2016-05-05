@@ -1,0 +1,9 @@
+
+((digest . "126999796dcb05bc7c2f1ba5026a7e89") (undo-list nil ("#+TITLE: 進捗報告
+#+AUTHOR: B4 福本 篤人
+#+LATEX_CLASS: progress
+#+OPTIONS: toc:nil timestamp:nil
+#+STARTUP: indent
+
+* 
+" . -113) ((marker . 1) . -109) ((marker . 1) . -109) ((marker . 109) . -14) ((marker . 109) . -14) ((marker . 34) . -90) ((marker . 34) . -90) ((marker . 58) . -57) ((marker . 58) . -57) ((marker . 91) . -33) ((marker . 91) . -33) ((marker . 15) . -108) ((marker . 15) . -108) ((marker) . -112) ((marker) . -112) ((marker) . -112) (t . -1) nil (1 . 113) (1 . 113) (t . -1)))

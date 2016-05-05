@@ -1,0 +1,2 @@
+
+((digest . "84a71f6aae8d93edf51449084501f83c") (undo-list nil (79 . 81) nil ("6" . -79) nil ("0" . -80) nil (79 . 81) nil (79 . 84) nil ("，" . -79) nil (79 . 80) nil (78 . 79) (t 22287 9388 0 0) nil (72 . 78) nil (68 . 72) nil (" " . -64) nil (" " . -65) nil (66 . 68) nil ("87" . 68) nil undo-tree-canary))

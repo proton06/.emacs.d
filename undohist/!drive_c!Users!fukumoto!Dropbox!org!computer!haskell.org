@@ -1,0 +1,28 @@
+
+((digest . "81051bcc2cf1bedf378224b0a93e2877") (undo-list nil ("* haskell で乱数生成												:haskell:
+import System.Random.MWC
+
+main :: IO ()
+main = withSystemRandom . asGenIO $ \\gen -> do
+    -- 基本的な乱数生成
+    r0 <- uniform gen :: IO Int
+    r1 <- uniform gen :: IO Double
+    r2 <- uniform gen :: IO Bool
+    print (r0, r1, r2)
+    -- (6129061023494953312,0.35663084737564565,True)
+
+    -- 範囲の決められた乱数生成
+    r3 <- uniformR (1,100) gen :: IO Int
+    r4 <- uniformR (0,1)  gen :: IO Double
+    print (r3, r4)
+    -- (88,0.40205531778476833)
+
+    -- ランダムな文字列生成
+    let randomSamples :: [a] -> Int -> IO [a]
+        randomSamples xs n = map (xs!!) <$> (sequence . replicate n $ uniformR (0, length xs - 1) gen)
+    r5 <- randomSamples ['a'..'z'] 10
+    r6 <- randomSamples (['a'..'z']++['A'..'Z']) 10
+    r7 <- randomSamples (['a'..'z']++['A'..'Z']++['0'..'9']) 10
+    print (r5, r6, r7)
+    -- (\"zpnmprtjoh\",\"AVZIebceLK\",\"cjFym4gmjR\")
+" . 2) ((marker . 1) . -818) ((marker . 1) . -818) ((marker) . -866) 868 (t 22262 47963 0 0) nil (17 . 29) ("                                                " . -17) ("" . -17) (t 22262 47914 0 0) (17 . 74) (t 22262 47914 0 0) nil (846 . 847) 659 nil (nil rear-nonsticky nil 845 . 846) (nil fontified nil 18 . 846) (18 . 846) nil ("work/programming/ICPC/2015/B/" . 18) nil (nil rear-nonsticky nil 46 . 47) (nil fontified nil 18 . 47) (18 . 47) nil (17 . 18) nil (13 . 17) nil (" " . -13) nil (13 . 14) nil (12 . 13) nil (4 . 12) nil (1 . 4) (t . -1)))

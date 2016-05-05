@@ -1,0 +1,4 @@
+
+((digest . "74880501540eba0630d52d6892099b19") (undo-list nil (1 . 9) nil ("aaaaa
+1" . 1) ((marker . 7) . -6) ((marker . 7) . -6) ((marker . 1) . -7) ((marker . 1) . -7) ((marker . 1) . -7) ((marker . 1) . -7) ((marker . 1) . -7) ((marker) . -7) ((marker) . -6) 8 (t 22282 18413 0 0) nil (1 . 8) nil ("abcabc
+2" . 1) ((marker . 1) . -7) ((marker . 1) . -7) ((marker . 1) . -8) ((marker . 1) . -8) ((marker . 1) . -8) ((marker . 1) . -8) ((marker) . -7) ((marker) . -8) 9 (t 22281 55550 0 0) nil (1 . 9) nil ("40" . -1) 1 (t 22281 55115 0 0) nil (1 . 3) nil ("John" . 1) (t 22281 54872 0 0) nil (1 . 5) (t . -1)))

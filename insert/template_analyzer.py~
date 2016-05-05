@@ -1,0 +1,103 @@
+# -*- coding: utf-8 -*-
+import myAnalyzer as ma
+
+
+class Analyzer(ma.SinglerAnalyzer):
+    def __init__(self, keyword, out=''):
+        """
+        parameters
+        ----------
+        keyword : str
+            解析するファイルを指定する正規表現パターン
+        out : str
+            解析したファイルを出力するディレクトリのパス
+        """
+        super().__init__(keyword=keyword, out=out)
+
+    def analyze(self, filename):
+        """
+        ファイルを解析して解析結果を返します
+        parameters
+        ----------
+        filename : str
+            解析するファイル名
+
+        returns
+        ----------
+        out : Outable または Outable の list
+
+        note
+        ----------
+        Outable(myAnalyzer.Outable) には次のオブジェクトが用意されています．
+        Outdf(df, name, **argds)
+            parameters
+            ----------
+            df : pd.DataFrame
+            name : str
+            argds : dict
+                pd.DataFrame.to_csv() に渡す引数の辞書
+
+        OutFig(fig, name, **args)
+            parameters
+            ----------
+            fig : plt.Figure または plt.axes
+            name : str
+            argds : dict
+                plt.Figure.savefig() に渡す引数の辞書
+        """
+        return ma.Outable()
+
+'''
+class Analyzer(ma.PluralAnalyzer):
+    def __init__(self, keyword, groupKey, out=''):
+        """
+        parameters
+        ----------
+        keyword : str
+            解析するファイルを指定する正規表現パターン
+        out : str
+            解析したファイルを出力するディレクトリのパス
+        """
+        super().__init__(keyword=keyword, groupKey=groupKey, out=out)
+
+    def analyze(self, filenames):
+        """
+        ファイルを解析して解析結果を返します
+        parameters
+        ----------
+        filename : str
+            解析するファイル名
+
+        returns
+        ----------
+        out : Outable または Outable の list
+
+        note
+        ----------
+        Outable(myAnalyzer.Outable) には次のオブジェクトが用意されています．
+        Outdf(df, name, **argds)
+            parameters
+            ----------
+            df : pd.DataFrame
+            name : str
+            argds : dict
+                pd.DataFrame.to_csv() に渡す引数の辞書
+
+        OutFig(fig, name, **args)
+            parameters
+            ----------
+            fig : plt.Figure または plt.axes
+            name : str
+            argds : dict
+                plt.Figure.savefig() に渡す引数の辞書
+        """
+        return ma.Outable()
+'''
+
+def main():
+    analyzer = Analyzer()
+    analyzer.execute(target='result', out='analyze')
+
+
+if __name__ == '__main__':
+    main()

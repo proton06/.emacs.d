@@ -1,0 +1,2 @@
+
+((digest . "7f8f58c352cbdf41aeb85504059da445") (undo-list nil (170 . 171) nil (167 . 170) nil ("ｄ" . -167) nil (164 . 168) nil ("肢" . -164) nil ("て" . -165) nil ("も" . -166) nil (162 . 167) nil (153 . 162) nil (148 . 153) nil (143 . 148) nil (142 . 143) nil (141 . 142) nil (nil rear-nonsticky nil 140 . 141) (nil fontified nil 107 . 141) (107 . 141) nil (106 . 108) (t 22242 22149 0 0) nil undo-tree-canary))

@@ -1,0 +1,5 @@
+
+((digest . "ae5a018b82c757ee1c16a056367f6bbd") (undo-list nil (141 . 142) (t 22273 61101 0 0) nil (":" . -141) nil (141 . 142) nil (140 . 141) (139 . 141) ("{" . -139) (138 . 140) nil (138 . 139) nil ("       (defun org-xor (a b)
+          \"Exclusive or.\"
+          (if a (not b) b))
+" . 138) ((marker . 138) . -82) ((marker . 138) . -82) 220 nil undo-tree-canary))

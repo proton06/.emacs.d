@@ -1,0 +1,3 @@
+
+((digest . "ae3ecd982e09fb855bcc44b12b38d531") (undo-list nil ("
+" . 796) ((marker . 1302) . -1) ((marker . 1302) . -1) ((marker) . -1) (t 22313 27550 0 0) nil (760 . 765) nil ("o" . -760) nil ("c" . -761) nil ("a" . -762) nil ("l" . -763) nil (760 . 764) nil ("global" . -760) nil (716 . 721) nil ("global" . 716) nil (754 . 760) nil (709 . 715) nil (nil fontified nil 785 . 786) (nil fontified nil 774 . 785) (nil fontified nil 769 . 774) (nil fontified nil 735 . 769) (nil fontified nil 730 . 735) (nil fontified nil 709 . 730) (709 . 786) nil (710 . 716) ("	     " . 709) (708 . 716) nil undo-tree-canary))

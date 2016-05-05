@@ -1,0 +1,15 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: doc string
+# key: doc
+# binding: direct-keybinding
+# --
+"""
+$1
+parameters
+----------
+$2
+${3:returns
+----------
+out : $4}
+"""
+$0

@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: table
+# key: tab
+# binding: direct-keybinding
+# --
+\begin{table}[htb]
+  \begin{center}
+    \caption{\label{tab:${1:label}} ${2:caption}}
+    \begin{tabular}{${3:columns}}
+      $0
+    \end{tabular}
+  \end{center}
+\end{table}

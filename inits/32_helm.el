@@ -1,0 +1,15 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; helm
+(require 'helm-config)
+(helm-mode 1)
+(helm-migemo-mode 1)
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+(define-key helm-read-file-map (kbd "<tab>") 'helm-execute-persistent-action)
+(define-key helm-find-files-map (kbd "<tab>") 'helm-execute-persistent-action)
+(define-key helm-map (kbd "C-s") 'helm-select-action)
+(define-key helm-map (kbd "C-h") 'delete-backward-char)
+(define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-c r") 'helm-recentf)
+(global-set-key (kbd "C-c f") 'helm-for-files)
+(global-set-key (kbd "C-x r b") 'helm-bookmarks)

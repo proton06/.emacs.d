@@ -1,0 +1,6 @@
+#+TITLE: 進捗報告
+#+AUTHOR: B4 福本 篤人
+#+LATEX_CLASS: progress
+#+OPTIONS: toc:nil timestamp:nil
+
+* 

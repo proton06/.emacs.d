@@ -1,0 +1,16 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: define function
+# key: def
+# binding: direct-keybinding
+# --
+def ${1:func}($2):
+    u"""
+    $3
+    parameters
+    ----------
+    $2
+    returns
+    ----------
+    out :
+    """
+    $0

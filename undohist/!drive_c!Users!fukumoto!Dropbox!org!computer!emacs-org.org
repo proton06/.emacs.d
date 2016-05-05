@@ -1,0 +1,5 @@
+
+((digest . "11ec2fe44848e2db00f97e8582a222d8") (undo-list nil ("
+" . -1033) ((marker . 1033) . -1) ((marker) . -1) ((marker) . -1) ((marker . 1033) . -1) ((marker . 1033) . -1) ((marker . 1033) . -1) ((marker . 1033) . -1) nil ("* それなりに長い文章
+あ；ｓｄｆじゃあｋｄふñぃくぉじぇ；ふぁいｊふぁおいｊｆ；あさｓぢｊふぁ
+ｄｓｆｄあｄ；ｓｋｆじゃｄふぁｊｋｄ；ｌｋｄｊｓｆｄ；あｓｊｄｆ" . 1034) ((marker . 1033) . -81) ((marker) . -12) ((marker) . -12) ((marker . 1033) . -28) ((marker . 1033) . -23) ((marker) . -49) ((marker) . -49) ((marker . 1033) . -75) ((marker . 1033) . -81) ((marker) . -81) ((marker) . -12) 1058 nil undo-tree-canary))
