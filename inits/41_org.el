@@ -93,8 +93,8 @@
 (setq org-latex-pdf-process
       '("pdfplatex %f" "pdfplatex %f"))
 
-;; #+LATEX_CLASSを書かないとき，jsarticleクラス
-(setq org-latex-default-class "jsarticle")
+;; #+LATEX_CLASSを書かないとき，jarticleクラス
+;(setq org-latex-default-class "jarticle")
 
 ;;; org-modeでlatexの関数に色を付ける。
 ;; キーワード用にFaceを作成 (1)

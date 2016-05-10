@@ -1,14 +1,24 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; Migemo
+;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
+;;; @ search - migemo                                               ;;;
+;;;   https://github.com/emacs-jp/migemo                            ;;;
+;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
+
 (require 'migemo)
-(setq migemo-command "C:/Users/fukumoto/home/.emacs.d/migimo/cmigemo")
+
+(defvar migemo-command nil)
+(setq migemo-command "cmigemo")
+
+(defvar migemo-options nil)
 (setq migemo-options '("-q" "--emacs"))
 
-; Set your installed path
-(setq migemo-dictionary "C:/Users/fukumoto/home/.emacs.d/migimo/dict/utf-8/migemo-dict")
+(defvar migemo-dictionary nil)
+(setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
 
-(setq migemo-user-dictionary nil)
-(setq migemo-regex-dictionary nil)
+(defvar migemo-user-dictionary nil)
+
+(defvar migemo-regex-dictionary nil)
+
+(defvar migemo-coding-system nil)
 (setq migemo-coding-system 'utf-8-unix)
+
 (load-library "migemo")
-(migemo-init)
