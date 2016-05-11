@@ -1,5 +1,4 @@
 alias pdf C:/Program\ Files\ (x86)/Adobe/Acrobat\ Reader\ DC/Reader/AcroRd32.exe $1
-alias git C:\Users\fukumoto\AppData\Local\Programs\Git\git-bash.exe
 alias mv mv - i
 alias emacs find-file $1
 alias m find-file $1

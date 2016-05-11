@@ -12,112 +12,6 @@
   (server-start)
 )
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; LoadPath
-;; load-pathを再帰的に追加。
-(defun add-to-load-path (&rest paths)
-(let (path)
-    (dolist (path paths paths)
-    (let ((default-directory (expand-file-name (concat user-emacs-directory path))))
-    (add-to-list 'load-path default-directory)
-     (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-         (normal-top-level-add-subdirs-to-load-path))))))
-
-(add-to-load-path "elpa")
-(add-to-load-path "site-lisp")
-
-(set-language-environment 'Japanese)
-(prefer-coding-system 'utf-8)
-
-(cd "~/")
-
-;; el と elc の新しいほうを読み込む
-(setq load-prefer-newer t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; other option
-
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; highlight
-(global-hl-line-mode t)                   ;; 現在行をハイライト
-(show-paren-mode t)                       ;; 対応する括弧をハイライト
-(setq show-paren-style 'mixed)            ;; 括弧のハイライトの設定。
-(transient-mark-mode t)                   ;; 選択範囲をハイライト
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(flycheck-error-list-info ((t (:inherit success))))
- '(hl-line ((t (:background "gray12"))))
- '(linum-highlight-face ((t (:inherit default :foreground "midnight blue"))))
- '(show-paren-match ((t (:background "SteelBlue4" :foreground "white"))))
- '(vhl/default-face ((t (:background "gray15")))))
-
-;; フォント設定
-(set-face-attribute 'default nil
-		    :family "Myrica M" ;; font
-		    :height 120) ;; font size
-
-
-
-;; 選択範囲を直接編集できるように
-(delete-selection-mode t)
-
-;; クリップボードの上書きを防ぐ
-(setq save-interprogram-paste-before-kill t)
-
-;; ビープ音を消す
-(setq visible-bell t)
-(setq ring-bell-function 'ignore)
-
-
-;; GCを減らして軽くする(デフォルトの10倍)
-(setq gc-cons-threshold (* 10 gc-cons-threshold))
-
-;; yes or noをy or n
-(fset 'yes-or-no-p 'y-or-n-p)
-
-;; 行番号表示
-(global-linum-mode t)
-(set-face-attribute 'linum nil
-		    :foreground "#f0f8ff"  ;;行番号の色
-		    :height 0.9)
-
-
-;; テーマ
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(ansi-color-names-vector
-   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
- '(custom-enabled-themes (quote (deeper-blue)))
- '(electric-indent-mode t)
- '(flycheck-chktexrc "C:/Users/fukumoto/home/.emacs.d/config/flycheck/.chktexrc")
- '(flycheck-flake8-maximum-line-length 120)
- '(flycheck-flake8rc "C:/Users/fukumoto/home/.emacs.d/config/flycheck/.flake8rc")
- '(inhibit-startup-screen t)
- '(show-paren-mode t)
- '(tool-bar-mode nil))
-
-
-;; パッケージ管理
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
-
-;; inits
-(require 'init-loader)
-(setq init-loader-show-log-after-init 'error-only)
-(init-loader-load "~/.emacs.d/inits") ; 設定ファイルがあるディレクトリを指定
-
 ;;; .emacs --- dot emacs file
 
 ;; This file is NOT part of GNU Emacs.
@@ -237,200 +131,6 @@
 ;; ;; フォントサイズ リセット
 ;; (global-set-key (kbd "M-0") '(lambda() (interactive) (text-scale-set 0)))
 
-
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-;;; @ screen - frame                                                ;;;
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-
-(setq default-frame-alist
-      (append '((width                . 85)  ; フレーム幅
-                (height               . 38 ) ; フレーム高
-             ;; (left                 . 70 ) ; 配置左位置
-             ;; (top                  . 28 ) ; 配置上位置
-                (line-spacing         . 0  ) ; 文字間隔
-                (left-fringe          . 10 ) ; 左フリンジ幅
-                (right-fringe         . 11 ) ; 右フリンジ幅
-                (menu-bar-lines       . 1  ) ; メニューバー
-                (tool-bar-lines       . 0  ) ; ツールバー
-                (vertical-scroll-bars . 1  ) ; スクロールバー
-                (scroll-bar-width     . 17 ) ; スクロールバー幅
-                (cursor-type          . box) ; カーソル種別
-                (alpha                . 100) ; 透明度
-                ) default-frame-alist) )
-(setq initial-frame-alist default-frame-alist)
-
-;; フレーム タイトル
-(setq frame-title-format
-      '("emacs " emacs-version (buffer-file-name " - %f")))
-
-;; 初期画面の非表示（有効：t、無効：nil）
-;; (setq inhibit-startup-message nil)
-;; (setq inhibit-startup-screen nil)
-
-;; フルスクリーン化
-(global-set-key (kbd "<M-return>") 'toggle-frame-fullscreen)
-
-
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-;;; @ screen - mode line                                            ;;;
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-
-;; 行番号の表示（有効：t、無効：nil）
-(line-number-mode t)
-
-;; 列番号の表示（有効：t、無効：nil）
-(column-number-mode t)
-
-;; モードライン カスタマイズ
-;; (setq-default
-;;  mode-line-format
-;;  `(
-;;    ""
-;;    w32-ime-mode-line-state-indicator
-;;    " "
-;;    mode-line-mule-info
-;;    mode-line-modified
-;;    mode-line-frame-identification
-;;    mode-line-buffer-identification
-;;    " "
-;;    global-mode-string
-;;    " %[("
-;;    mode-name
-;;    mode-line-process
-;;    "%n"
-;;    ")%] "
-;;    (which-func-mode ("" which-func-format " "))
-;;    (line-number-mode
-;;     (:eval
-;;      (format "L%%l/L%d " (count-lines (point-max) 1) )))
-;;    (column-number-mode " C%c ")
-;;    (-3 . "%p")
-;;    )
-;;  )
-;; (setq mode-line-frame-identification " ")
-
-;; cp932エンコードの表記変更
-(coding-system-put 'cp932 :mnemonic ?P)
-(coding-system-put 'cp932-dos :mnemonic ?P)
-(coding-system-put 'cp932-unix :mnemonic ?P)
-(coding-system-put 'cp932-mac :mnemonic ?P)
-
-;; UTF-8エンコードの表記変更
-(coding-system-put 'utf-8 :mnemonic ?U)
-(coding-system-put 'utf-8-with-signature :mnemonic ?u)
-
-;; 改行コードの表記追加
-(setq eol-mnemonic-dos       ":Dos ")
-(setq eol-mnemonic-mac       ":Mac ")
-(setq eol-mnemonic-unix      ":Unx ")
-(setq eol-mnemonic-undecided ":??? ") 
-
-
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-;;; @ screen - buffer                                               ;;;
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-
-;; バッファ画面外文字の切り詰め表示（有効：t、無効：nil）
-(setq truncate-lines nil)
-
-;; ウィンドウ縦分割時のバッファ画面外文字の切り詰め表示（有効：t、無効：nil）
-(setq truncate-partial-width-windows t)
-
-;; 同一バッファ名にディレクトリ付与
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-(setq uniquify-ignore-buffers-re "*[^*]+*")
-
-
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-;;; @ screen - minibuffer                                           ;;;
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-
-;; minibufferのアクティブ時、IMEを無効化
-(add-hook 'minibuffer-setup-hook
-          (lambda ()
-            (deactivate-input-method)))
-(wrap-function-to-control-ime 'y-or-n-p nil nil)
-(wrap-function-to-control-ime 'map-y-or-n-p nil nil)
-(wrap-function-to-control-ime 'read-char nil nil)
-
-
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-;;; @ screen - cursor                                               ;;;
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-
-;; カーソルの点滅（有効：1、無効：0）
-(blink-cursor-mode 1)
-
-;; 非アクティブウィンドウのカーソル表示（有効：t、無効：nil）
-(setq-default cursor-in-non-selected-windows t)
-
-;; IME無効／有効時のカーソルカラー定義
-(unless (facep 'cursor-ime-off)
-  (make-face 'cursor-ime-off)
-  (set-face-attribute 'cursor-ime-off nil
-                      :background "DarkRed" :foreground "White")
-  )
-(unless (facep 'cursor-ime-on)
-  (make-face 'cursor-ime-on)
-  (set-face-attribute 'cursor-ime-on nil
-                      :background "DarkGreen" :foreground "White")
-  )
-
-;; IME無効／有効時のカーソルカラー設定
-(advice-add 'ime-force-on
-            :before (lambda (&rest args)
-                      (if (facep 'cursor-ime-on)
-                          (let ( (fg (face-attribute 'cursor-ime-on :foreground))
-                                 (bg (face-attribute 'cursor-ime-on :background)) )
-                            (set-face-attribute 'cursor nil :foreground fg :background bg) )
-                        )
-                      ))
-(advice-add 'ime-force-off
-            :before (lambda (&rest args)
-                      (if (facep 'cursor-ime-off)
-                          (let ( (fg (face-attribute 'cursor-ime-off :foreground))
-                                 (bg (face-attribute 'cursor-ime-off :background)) )
-                            (set-face-attribute 'cursor nil :foreground fg :background bg) )
-                        )
-                      ))
-
-;; バッファ切り替え時の状態引継ぎ設定（有効：t、無効：nil）
-(setq w32-ime-buffer-switch-p t)
-
-
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-;;; @ screen - linum                                                ;;;
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-
-;; (require 'linum)
-
-;; ;; 行移動を契機に描画
-;; (defvar linum-line-number 0)
-;; (declare-function linum-update-current "linum" ())
-;; (defadvice linum-update-current
-;;     (around linum-update-current-around activate compile)
-;;   (unless (= linum-line-number (line-number-at-pos))
-;;     (setq linum-line-number (line-number-at-pos))
-;;     ad-do-it
-;;     ))
-
-;; ;; バッファ中の行番号表示の遅延設定
-;; (defvar linum-delay nil)
-;; (setq linum-delay t)
-;; (defadvice linum-schedule (around linum-schedule-around () activate)
-;;   (run-with-idle-timer 1.0 nil #'linum-update-current))
-
-;; ;; 行番号の書式
-;; (defvar linum-format nil)
-;; (setq linum-format "%5d")
-
-;; ;; バッファ中の行番号表示（有効：t、無効：nil）
-;; (global-linum-mode t)
-
-;; ;; 文字サイズ
-;; (set-face-attribute 'linum nil :height 0.75)
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
@@ -697,3 +397,110 @@
 ;; End:
 
 ;;; ends here
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; LoadPath
+;; load-pathを再帰的に追加。
+(defun add-to-load-path (&rest paths)
+(let (path)
+    (dolist (path paths paths)
+    (let ((default-directory (expand-file-name (concat user-emacs-directory path))))
+    (add-to-list 'load-path default-directory)
+     (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+         (normal-top-level-add-subdirs-to-load-path))))))
+
+(add-to-load-path "elpa")
+(add-to-load-path "site-lisp")
+
+(set-language-environment 'Japanese)
+(prefer-coding-system 'utf-8)
+
+(cd "~/")
+
+;; el と elc の新しいほうを読み込む
+(setq load-prefer-newer t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; other option
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; highlight
+(global-hl-line-mode t)                   ;; 現在行をハイライト
+(show-paren-mode t)                       ;; 対応する括弧をハイライト
+(setq show-paren-style 'mixed)            ;; 括弧のハイライトの設定。
+(transient-mark-mode t)                   ;; 選択範囲をハイライト
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(flycheck-error-list-info ((t (:inherit success))))
+ '(hl-line ((t (:background "gray12"))))
+ '(linum-highlight-face ((t (:inherit default :foreground "midnight blue"))))
+ '(show-paren-match ((t (:background "SteelBlue4" :foreground "white"))))
+ '(vhl/default-face ((t (:background "gray15")))))
+
+;; フォント設定
+(set-face-attribute 'default nil
+		    :family "Myrica M" ;; font
+		    :height 120) ;; font size
+
+
+
+;; 選択範囲を直接編集できるように
+(delete-selection-mode t)
+
+;; クリップボードの上書きを防ぐ
+(setq save-interprogram-paste-before-kill t)
+
+;; ビープ音を消す
+(setq visible-bell t)
+(setq ring-bell-function 'ignore)
+
+
+;; GCを減らして軽くする(デフォルトの10倍)
+(setq gc-cons-threshold (* 10 gc-cons-threshold))
+
+;; yes or noをy or n
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; 行番号表示
+(global-linum-mode t)
+(set-face-attribute 'linum nil
+		    :foreground "#f0f8ff"  ;;行番号の色
+		    :height 0.9)
+
+
+;; テーマ
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(custom-enabled-themes (quote (deeper-blue)))
+ '(electric-indent-mode t)
+ '(flycheck-chktexrc "C:/Users/fukumoto/home/.emacs.d/config/flycheck/.chktexrc")
+ '(flycheck-flake8-maximum-line-length 120)
+ '(flycheck-flake8rc "C:/Users/fukumoto/home/.emacs.d/config/flycheck/.flake8rc")
+ '(inhibit-startup-screen t)
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
+
+
+;; パッケージ管理
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+;; inits
+(require 'init-loader)
+(setq init-loader-show-log-after-init 'error-only)
+(init-loader-load "~/.emacs.d/inits") ; 設定ファイルがあるディレクトリを指定
+
